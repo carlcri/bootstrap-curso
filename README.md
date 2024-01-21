@@ -223,8 +223,109 @@ Fijate que para un viewport menor o igual a 991, habra un cambio:
 
 ![](https://i.imgur.com/4D1Q9dL.png)
 
-1:30:29
+# La Grid de Bootstrap con breakpoints
 
+*3_ejemplo*
+
+Vamos a ver la grid de Bootstrap usando puntos de quiebre especificos. Empezamos otra vez desde cero. Dejando la estructura basica del contenedor.
+
+```html
+<div class="container text-center">
+		<div class="row">
+			<div class="col-md-4 columna">.col-md-4</div>
+			<div class="col-md-8 columna">.col-md-8</div>
+		</div>
+</div>
+```
+Crearemos tambien la clase propia *columna* para ilustrar como trabajar con Bootstrap y nuestras propias clases. 
+
+Vamos a probar en el navegador cuando pasa de 767 a 768. Y no pasa nada 😒
+Asi que agregamos una nueva clase para que en dispositivos grandes(lg), cada columna tome 6. A partir de 992
+
+```html
+<div class="container text-center">
+		<div class="row">
+			<div class="col-md-4 col-lg-6 columna">.col-md-4</div>
+			<div class="col-md-8 col-lg-6 columna">.col-md-8</div>
+		</div>
+	</div>
+```
+
+Y ahora observaras pasando de 991 a 992, cada columna tomara 6 de 12.
+
+![](https://i.imgur.com/tW8VeKI.png)
+
+![](https://i.imgur.com/jdWSo82.png)
+
+Este es el principio basico de como se pueden usar todas estas clases con puntos de quiebre. 
+
+# Componentes de Bootstrap
+
+Un componente de Boostrap es un elemento html reutilizable que ya viene con un estilo prederminado para usar en nuestros proyectos. 
+Tambien podemos personalizar los estilos de los componentes. Lo mas apropiado es ir a la documentacion, bajo la categoria de *components*:
+
+![](https://i.imgur.com/z3NKUXl.png)
+
+Y ahi mismo probar cada componente de forma iterativa, por ejemplo *accordion*, *Alerts*, *Buttons*, *Carousel*
+
+# Componenetes Ejemplo
+
+*4_ejemplo*
+
+Por ejemplo, copiemos y peguemos el componente accordion directamente el body(*index.html*)
+
+![](https://i.imgur.com/WtEC5hR.png)
+
+Aqui ocuparia el 100% de la pantalla, porque no lo hemos colocado dentro de un contenedor, ni hecho nada. 
+
+Aqui, en *index1.html.* lo colocamos dentro de un div. Y veras que ahora tendra un ancho maximo.
+
+![](https://i.imgur.com/Bz0iTp4.png)
+
+# Iconos de Bootstrap
+
+Ya no tienes que usar por ejemplo iconos para las redes sociales, son muy utiles. "Free, high quality, open source icon library with over 2,000 icons. Include them anyway you like—SVGs, SVG sprite, or web fonts. Use them with or without Bootstrap in any project".
+
+SVG es un formato grafico que no se distorcinan cuando se incrementa su tamaño. Por ejemplo si seleccionamos un icono en particular, nos va a mostrar como incluirlo, y algunos ejemplos, muy completa la documentacion. 
+
+Podemos instalar los iconos, o usar un CDN(Content Delivery Network) es una forma de obtener esa hoja de estilos sin descargarlos. Sino que se descargan cuando el usuario ingresa a la pagina. 
+
+## Ejemplo
+
+El primer paso para agregar un icono es ir a la documentacion, https://icons.getbootstrap.com/ 
+
+Hay muchas maneras de incluir iconos, pero la mas sencilla es *Icon Font*. De esta forma se tratara como un texto, y vamos a poder cambierle el color y el tamaño. 
+
+![](https://i.imgur.com/6wOmIeB.png)
+
+Si solo copiamos el icon font, no va a funcionar, es necesario incluir ya sea como html o css:
+
+![](https://i.imgur.com/RYGyU12.png)
+
+Vamos a escoger el primero.
+
+![](https://i.imgur.com/dhBtAUs.png)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"> 👈
+    <title>Iconos</title>
+</head>
+<body>
+    <div class="container">
+        <i class="bi bi-android2"></i> 👈
+    </div>
+</body>
+</html>
+```
+
+vamos a darle algunos estilos. 
+
+![](https://i.imgur.com/HvGkXMh.png)
 
 
 
